@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Riqualificazione</title>
+    </head>
+
+    <body>
+        <!-- <div class="initialAnimation">
+            <canvas class="initialCanvas"></canvas>
+            <div class="pageTitle big">
+                <div class="pageTitleInner">
+                    <div class="title">Minions Park Morena</div>
+                    <div class="subtitle">
+                        Proposta di riqualificazione
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="scelta">
+            <div class="text">
+                <div class="title">Motivi della scelta</div>
+
+                <div class="text-list">
+                    <div>
+                        La struttura scelta per il progetto di riqualificazione
+                        urbanistica è il parco "Minions Park", situato in Via
+                        Pazzano, 84, 00118 Roma RM.
+                    </div>
+
+                    <div>
+                        Principale zona verde dei dintorni, il parco in passato
+                        offriva un punto di svago per i bambini e i ragazzi del
+                        luogo. Nonostante i lavori e l'impegno di diverse
+                        associazioni di volontari per riqualificare il parco,
+                        tutt'oggi presenta ancora delle criticità da risolvere.
+                    </div>
+
+                    <div>
+                        Avendo anche un legame affettivo con il luogo, in quanto
+                        da bambino mi ci riunivo con diversi amici per giocare,
+                        ho deciso di prendere in esame questo parco per tentare
+                        di risolverne le attuali problematiche
+                    </div>
+                </div>
+            </div>
+
+            <div class="map">
+                <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2252.752282643486!2d12.61447697795888!3d41.80925370639331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132589677a564521%3A0x64df1c291788ddc7!2sMinions%20Park%20Morena!5e1!3m2!1sit!2sit!4v1683127459942!5m2!1sit!2sit"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe> -->
+            </div>
+        </div>
+
+        <div class="inquadramento">
+            <div id="carousel" class="carousel map1">
+                <button onclick="changeSlide(false)"><</button>
+                <button onclick="changeSlide(true)">></button>
+            </div>
+
+            <div class="text">
+                <div class="title">Inquadramento urbanistico</div>
+
+                <div class="list">
+                    <div class="big">
+                        <span class="bold">Posizione: </span>Via Pazzano, 84,
+                        00118 Roma RM
+                    </div>
+                    <div class="big">
+                        <span class="bold">Dimensioni: </span>5.050 m² circa
+                    </div>
+                    <div class="big">
+                        Come si può notare dalle immagini, l'area evidenziata è
+                        una delle poche zone verde adibite a parco pubblico
+                        della zona. Purtroppo la maggior parte dello spazio non
+                        è sfruttato al meglio, con solo una piccola zona
+                        riservata all'area giochi
+                    </div>
+                </div>
+
+                <div class="legenda big">
+                    <span class="bold">Legenda</span>
+
+                    <div class="color-list">
+                        <div class="color-container">
+                            <div class="color orange"></div>
+                            <div>Entrata</div>
+                        </div>
+
+                        <div class="color-container">
+                            <div class="color green"></div>
+                            <div>Area giochi</div>
+                        </div>
+
+                        <div class="color-container">
+                            <div class="color red"></div>
+                            <div>Zona non utilizzata</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+            integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+            integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script src="./app.js"></script>
+    </body>
+</html>

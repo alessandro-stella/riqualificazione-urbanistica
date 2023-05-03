@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #171717;
+    --text-color: #efefef;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #171717;
+    color: var(--text-color);
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--text-color) var(--background-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+    border: 2px solid #171717;
+}
+
+.pageTitle {
+    background: linear-gradient(#00000000, #000000aa);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.initialAnimation {
+    position: relative;
+}
+
+.title {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+.big {
+    font-size: 2em;
+}
+
+.pageTitleInner {
+    height: 120vh;
+    width: 100vw;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* ----- Scelta ----- */
+
+.scelta {
+    height: 100vh;
+    padding: 3em;
+
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.scelta .text {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.scelta .text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 2em;
+}
+
+.scelta .map {
+    flex: 1;
+    height: 80%;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- Inquadramento urbanistico ----- */
+
+.inquadramento {
+    width: 100%;
+    height: 100vh;
+    padding: 3em;
+
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.inquadramento .text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.inquadramento .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.inquadramento .legenda {
+    padding-top: 0.5em;
+    border-top: 1px var(--text-color) solid;
+}
+
+.inquadramento .color-list {
+    margin-top: 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.inquadramento .color-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.inquadramento .color {
+    height: 2em;
+    width: 2em;
+}
+
+.inquadramento .color.orange {
+    background-color: rgb(255, 149, 0);
+}
+
+.inquadramento .color.green {
+    background-color: #0f0;
+}
+
+.inquadramento .color.red {
+    background-color: #f00;
+}
+
+/* ----- Carousel ----- */
+
+.carousel {
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+
+    flex: 2;
+    height: 100%;
+    padding: 0.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel.map1 {
+    background-image: url("./imageSlider/map1.png");
+}
+
+.carousel.map2 {
+    background-image: url("./imageSlider/map2.png");
+}
+
+.carousel.map3 {
+    background-image: url("./imageSlider/map3.png");
+}
+
+.carousel button {
+    outline: none;
+    border: 0;
+
+    padding: 1em;
+    font-size: 2em;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.8;
+}
+
+.carousel button:hover {
+    filter: brightness(2);
+}
