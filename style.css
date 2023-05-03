@@ -196,8 +196,8 @@ iframe {
     background-position: center;
     background-size: cover;
 
-    flex: 2;
-    height: 100%;
+    flex: 1.5;
+    height: 80%;
     padding: 0.5em;
 
     display: flex;
