@@ -14,17 +14,15 @@
     </head>
 
     <body>
-        <!-- <div class="initialAnimation">
+        <div class="initialAnimation">
             <canvas class="initialCanvas"></canvas>
             <div class="pageTitle big">
                 <div class="pageTitleInner">
                     <div class="title">Minions Park Morena</div>
-                    <div class="subtitle">
-                        Proposta di riqualificazione
-                    </div>
+                    <div class="subtitle">Proposta di riqualificazione</div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="scelta">
             <div class="text">
@@ -69,8 +67,8 @@
 
         <div class="inquadramento">
             <div id="carousel" class="carousel map1">
-                <button onclick="changeSlide(false)"><</button>
-                <button onclick="changeSlide(true)">></button>
+                <button onclick="changeMap()"><</button>
+                <button onclick="changeMap()">></button>
             </div>
 
             <div class="text">
@@ -116,6 +114,52 @@
             </div>
         </div>
 
+        <div class="criticita">
+            <div class="text">
+                <div class="title">Criticità</div>
+
+                <div class="text-list">
+                    <div>
+                        Le principali criticità del parco riguardano l'incuria e
+                        il mancato utilizzo degli ampi spazi a disposizione.
+                    </div>
+
+                    <div>
+                        Come evidenziato nelle immagini qui affianco, vicino
+                        l'entrata e a sinistra del vialetto che porta al centro
+                        del parco ci sono degli ampi prati che potrebbero essere
+                        sfruttati meglio per sopperire alle attuali mancanze,
+                        quali la mancanza di servizi igienici, di fontanelle per
+                        dissetarsi e di una zona per sedersi e mangiare
+                        comodamente
+                    </div>
+
+                    <div>
+                        Altre problematiche riguardano l'accesso al parco:
+                        l'entrata è posta direttamente su una strada su cui
+                        vengono spesso parcheggiate le auto dei residenti della
+                        zona, rendendo quasi invisibile il cancello d'entrata e
+                        quindi rischioso l'accesso e l'uscita dal parco
+                    </div>
+                </div>
+            </div>
+
+            <div id="problemi" class="problemi criticita1">
+                <button onclick="changeProblem(false)"><</button>
+                <button onclick="changeProblem(true)">></button>
+            </div>
+        </div>
+
+        <div class="risultato">
+            <div class="title">Progetto</div>
+
+            <div class="anteprima">
+                <div class="text">
+                    <a href="/soluzione.html">VISUALIZZA PROGETTO</a>
+                </div>
+            </div>
+        </div>
+
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
             integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
@@ -130,6 +174,7 @@
             referrerpolicy="no-referrer"
         ></script>
 
-        <script src="./app.js"></script>
+        <script src="./canvas1.js"></script>
+        <script src="./utility.js"></script>
     </body>
 </html>
