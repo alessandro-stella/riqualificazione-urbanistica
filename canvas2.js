@@ -5,43 +5,85 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const context = canvas.getContext("2d");
-const frameCount = 177;
+const frameCount = 534;
 
 const currentFrame = (folder, index) =>
-    `./${folder}/frame${(index + 1).toString()}.jpg`;
+    `./${folder}/frame${(index + 1).toString()}.png`;
 
-const enteringScene = [];
+function addFrames(index, end = false) {
+    console.log(end);
+    let imagesToAdd = [];
+
+    for (let i = 0; i <= 9; i++) {
+        const img = new Image();
+        img.src = `./compressedResult/frame${index.toString()}-${i * 10}.png`;
+        imagesToAdd.push(img);
+        imagesToAdd.push(img);
+    }
+
+    const fullText = new Image();
+    fullText.src = `./compressedResult/frame${index.toString()}-100.png`;
+    imagesToAdd.push(fullText);
+    imagesToAdd.push(fullText);
+    imagesToAdd.push(fullText);
+    imagesToAdd.push(fullText);
+    imagesToAdd.push(fullText);
+
+    if (!end)
+        for (let i = 9; i >= 0; i--) {
+            const img = new Image();
+            img.src = `./compressedResult/frame${index.toString()}-${
+                i * 10
+            }.png`;
+            console.log(`frame${index.toString()}-${i * 10}`);
+            imagesToAdd.push(img);
+            imagesToAdd.push(img);
+        }
+
+    enteringScene = [...enteringScene, ...imagesToAdd];
+}
+
+let enteringScene = [];
 let enteringSceneFrame = { frame: 0 };
 
 for (let i = 0; i < frameCount; i++) {
     const img = new Image();
-    img.src = currentFrame("enteringScene", i);
-    enteringScene.push(img);
+
+    switch (i + 1) {
+        case 230:
+            addFrames(i + 1);
+            break;
+
+        case 330:
+            addFrames(i + 1);
+            break;
+
+        case 420:
+            addFrames(i + 1);
+            break;
+
+        case 534:
+            addFrames(i + 1, true);
+            break;
+
+        default:
+            img.src = currentFrame("compressedResult", i);
+            enteringScene.push(img);
+            break;
+    }
 }
 
 gsap.to(enteringSceneFrame, {
-    frame: frameCount - 1,
+    frame: enteringScene.length - 1,
     snap: "frame",
     ease: "none",
     scrollTrigger: {
         scrub: 0.5,
         pin: "canvas",
-        end: "300%",
+        end: "1500%",
     },
     onUpdate: renderEntering,
 });
-
-gsap.fromTo(
-    ".pageTitleInner",
-    { opacity: 0 },
-    {
-        opacity: 1,
-        scrollTrigger: {
-            trigger: ".pageTitleInner",
-            start: "50% bottom",
-        },
-    }
-);
 
 enteringScene[0].onload = renderEntering;
 

@@ -389,3 +389,77 @@ iframe {
     filter: brightness(2);
     cursor: pointer;
 }
+
+/* ----- Loader ----- */
+
+.loader-main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.loader-container {
+    height: 100%;
+
+    width: fit-content;
+    height: fit-content;
+
+    padding-bottom: 1em;
+
+    display: grid;
+    transform: scale(1.2);
+    transform-origin: bottom;
+}
+
+.loader {
+    width: 48px;
+    height: 78px;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 5px var(--background-color);
+    margin: auto;
+    border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    animation: scrollDown 2s linear infinite;
+    box-shadow: 0px 2px 5px var(--background-color);
+}
+
+@keyframes scrollDown {
+    0% {
+        top: 15px;
+        height: 4px;
+        opacity: 1;
+    }
+    33% {
+        top: 15px;
+        height: 40px;
+    }
+    66% {
+        top: 50px;
+        height: 10px;
+        opacity: 1;
+    }
+    100% {
+        top: 56px;
+        height: 4px;
+        opacity: 0;
+    }
+}
