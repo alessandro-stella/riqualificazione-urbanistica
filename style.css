@@ -8,6 +8,7 @@
     --background-color: #171717;
     --background-color-transparent: #17171780;
     --text-color: #efefef;
+    --loader-color: #006702;
 }
 
 ::-moz-selection {
@@ -554,5 +555,93 @@ iframe {
         top: 56px;
         height: 4px;
         opacity: 0;
+    }
+}
+
+/* ----- Loading state ----- */
+
+body:has(.initialAnimation.stopScroll) {
+    overflow: hidden;
+}
+
+#hide-content {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+
+    background-color: var(--background-color-transparent);
+    backdrop-filter: blur(5px);
+
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+#hide-content.hidden {
+    opacity: 0;
+}
+
+#hide-content .text {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.scene-loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #fff #fff transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+
+    scale: 2;
+}
+
+.scene-loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent var(--loader-color) var(--loader-color);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
     }
 }
