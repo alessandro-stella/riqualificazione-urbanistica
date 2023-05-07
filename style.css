@@ -404,17 +404,14 @@ iframe {
     align-items: center;
     justify-content: end;
 
-    padding-bottom: 1em;
+    padding-bottom: 2em;
 }
 
 .loader-main.top {
     position: sticky;
 
-    top: 0;
+    top: 2em;
     bottom: unset;
-
-    padding-bottom: 0em;
-    padding-top: 2em;
 }
 
 .loader-container {
