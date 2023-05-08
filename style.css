@@ -8,7 +8,6 @@
     --background-color: #171717;
     --background-color-transparent: #17171780;
     --text-color: #efefef;
-    --loader-color: #006702;
 }
 
 ::-moz-selection {
@@ -217,8 +216,8 @@ iframe {
 /* ----- Carousel ----- */
 
 .carousel {
-    background-repeat: none;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 
     flex: 1.5;
@@ -289,8 +288,8 @@ iframe {
 }
 
 .criticita .problemi {
-    background-repeat: none;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 
     height: 80%;
@@ -356,10 +355,10 @@ iframe {
     flex: 1;
     aspect-ratio: 16/9;
 
-    background-repeat: none;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    background-image: url("/preview.png");
+    background-image: url("./preview.png");
 }
 
 .risultato .anteprima .text {
@@ -418,9 +417,9 @@ iframe {
     height: 80%;
 
     background-image: url("./planimetria.png");
-    background-repeat: none;
-    background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 .riqualificazione .text {
@@ -620,7 +619,7 @@ body:has(.initialAnimation.stopScroll) {
     bottom: 0;
     margin: auto;
     border: 3px solid;
-    border-color: transparent var(--loader-color) var(--loader-color);
+    border-color: transparent var(--background-color) var(--background-color);
     width: 24px;
     height: 24px;
     border-radius: 50%;
