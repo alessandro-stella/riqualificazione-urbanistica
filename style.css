@@ -197,22 +197,6 @@ iframe {
     border: 1px solid var(--text-color);
 }
 
-.inquadramento .color.cyan {
-    background-color: hsl(180, 100%, 50%);
-}
-
-.inquadramento .color.orange {
-    background-color: hsl(35, 100%, 50%);
-}
-
-.inquadramento .color.green {
-    background-color: hsl(120, 100%, 50%);
-}
-
-.inquadramento .color.red {
-    background-color: hsl(0, 100%, 50%);
-}
-
 /* ----- Carousel ----- */
 
 .carousel {
@@ -461,20 +445,26 @@ iframe {
     border: 1px solid var(--text-color);
 }
 
-.riqualificazione .color.cyan {
+/* ----- Colors ----- */
+
+.color.cyan {
     background-color: hsl(180, 100%, 50%);
 }
 
-.riqualificazione .color.orange {
+.color.orange {
     background-color: hsl(35, 100%, 50%);
 }
 
-.riqualificazione .color.green {
+.color.green {
     background-color: hsl(120, 100%, 50%);
 }
 
-.riqualificazione .color.red {
+.color.red {
     background-color: hsl(0, 100%, 50%);
+}
+
+.color.magenta {
+    background-color: hsl(300, 100%, 50%);
 }
 
 /* ----- Scroll ----- */
