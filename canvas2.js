@@ -49,11 +49,9 @@ function addFrames(index, end = false) {
         `./compressedResult/frame${index.toString()}-100.png`
     );
 
-    imagesToAdd.push(fullText.cloneNode());
-    imagesToAdd.push(fullText.cloneNode());
-    imagesToAdd.push(fullText.cloneNode());
-    imagesToAdd.push(fullText.cloneNode());
-    imagesToAdd.push(fullText.cloneNode());
+    for (let i = 0; i < 30; i++) {
+        imagesToAdd.push(fullText.cloneNode());
+    }
 
     if (!end)
         for (let i = 9; i >= 0; i--) {
